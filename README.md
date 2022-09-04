@@ -7,9 +7,8 @@ Aplicação desenvolvida em Python com pyqt5 e pydyb.
 ####  pip - pydub - https://pypi.org/project/pydub/
 #### pydub - http://pydub.com/
 
+https://user-images.githubusercontent.com/101942554/188296205-a308a7e7-c2c8-457d-96aa-ca22dd563e91.mp4
 
-https://user-images.githubusercontent.com/101942554/188292465-79e8babd-f4ef-4163-b02b-334e3b011703.mp4
-
-![image](https://user-images.githubusercontent.com/101942554/188292484-7df15edb-68e0-4036-9a57-1e80cc934f85.png)
+![image](https://user-images.githubusercontent.com/101942554/188296288-b2e83b17-8bd0-4783-b1e6-11e045f40ef8.png)
 
 

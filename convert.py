@@ -1,5 +1,4 @@
-import time
-import os
+
 from PyQt5 import uic, QtWidgets 
 from pydub import AudioSegment
 from PyQt5.QtWidgets import QMessageBox
@@ -85,6 +84,8 @@ def convert():
         AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".ogg", format="ogg", bitrate = bitrate_k) 
     elif formato_audio == "wav":
         AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".wav", format="wav", bitrate = bitrate_k)
+    
+    # Atualiza Barra de Progressão
     
     file_size = len(salv_arquivo_diretorio)
     if file_size > 0:

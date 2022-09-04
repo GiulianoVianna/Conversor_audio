@@ -1,4 +1,5 @@
-
+import time
+import os
 from PyQt5 import uic, QtWidgets 
 from pydub import AudioSegment
 from PyQt5.QtWidgets import QMessageBox
@@ -34,9 +35,11 @@ def msg_bitrate_audio():
 # Lê o nome do arquivo e endereço do diretório
 
 def ler_arquivo():
+    tela.progressBar.setValue(0)
     arquivo = QtWidgets.QFileDialog.getOpenFileName()[0]
     with open(arquivo) as diretorio: 
         tela.ln_diretorio.setText(diretorio.name)
+
 
 #################################################################
 
@@ -74,12 +77,19 @@ def convert():
 
     if formato_audio == "flv":
         AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".flv", format="flv", bitrate = bitrate_k)
+
     elif formato_audio == "mp4":
         AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".mp4", format="mp4", bitrate = bitrate_k) 
+            
     elif formato_audio == "ogg":
         AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".ogg", format="ogg", bitrate = bitrate_k) 
     elif formato_audio == "wav":
         AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".wav", format="wav", bitrate = bitrate_k)
+    
+    file_size = len(salv_arquivo_diretorio)
+    if file_size > 0:
+        for valor in range(101):
+            tela.progressBar.setValue(valor)
           
 ################################################################# 
  

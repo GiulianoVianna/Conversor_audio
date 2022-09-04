@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>589</width>
-    <height>191</height>
+    <height>203</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,7 +46,7 @@
      <x>10</x>
      <y>10</y>
      <width>571</width>
-     <height>171</height>
+     <height>191</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -98,7 +98,7 @@ color: rgb(81, 81, 81);
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>150</y>
+      <y>170</y>
       <width>551</width>
       <height>16</height>
      </rect>
@@ -211,6 +211,23 @@ color: rgb(81, 81, 81);
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>551</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+</string>
+    </property>
+    <property name="value">
+     <number>0</number>
     </property>
    </widget>
    <widget class="QSplitter" name="splitter">

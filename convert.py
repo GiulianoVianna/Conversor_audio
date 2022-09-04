@@ -52,6 +52,8 @@ def ler_arquivo():
 
 #################################################################
 
+# Funções para a conversão do arquivo conforme o formato escolhido
+
 def flv():
 
     diretorio = tela.ln_diretorio.text()
@@ -161,6 +163,7 @@ def wav():
     elif formato_audio == "wav":        
         AudioSegment.from_wav(diretorio).export(salv_arquivo_diretorio + ".wav", format="wav", bitrate = bitrate_k)    
 
+#################################################################
 
 # Regra de validação para os campos obrigatórios
 
@@ -192,7 +195,8 @@ def verificar():
 
 #################################################################
 
-# Faz a conversão do arquivo conforme o formato escolhido
+# Faz a validação do formato de audio de entrada e executa a função para converter o audio
+# conforme formato de audio de escolhido
 
 def convert():
 
@@ -221,7 +225,7 @@ def convert():
         
         wav()
 
-    # Atualiza Barra de Progressão
+    # Atualiza Barra de Progresso
 
     file_size = len(salv_arquivo_diretorio)
     if file_size > 0:

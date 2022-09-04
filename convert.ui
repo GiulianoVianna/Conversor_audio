@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>*** VS - Conversor de Audio ***</string>
   </property>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
@@ -34,7 +34,7 @@
     <string notr="true">color: rgb(0, 170, 0);</string>
    </property>
    <property name="text">
-    <string>VS - Conversor de Aúdio</string>
+    <string>VS - Conversor de Audio</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -223,8 +223,7 @@ color: rgb(81, 81, 81);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-</string>
+     <string notr="true"/>
     </property>
     <property name="value">
      <number>0</number>
@@ -294,7 +293,7 @@ color: rgb(81, 81, 81);
       <string notr="true">color: rgb(81, 81, 81);</string>
      </property>
      <property name="text">
-      <string>Fortamo:</string>
+      <string>Formato:</string>
      </property>
     </widget>
     <widget class="QComboBox" name="cb_formato">
@@ -325,7 +324,7 @@ color: rgb(81, 81, 81);
      </item>
     </widget>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>13</x>
@@ -359,11 +358,7 @@ color: rgb(81, 81, 81);
    </widget>
   </widget>
   <zorder>frame</zorder>
-  <zorder>label</zorder>
-  <zorder>ln_diretorio</zorder>
   <zorder>label_2</zorder>
-  <zorder>cb_formato</zorder>
-  <zorder>label_3</zorder>
  </widget>
  <resources/>
  <connections/>

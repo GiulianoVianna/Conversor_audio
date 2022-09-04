@@ -9,6 +9,6 @@ Aplicação desenvolvida em Python com pyqt5 e pydyb.
 
 https://user-images.githubusercontent.com/101942554/188296205-a308a7e7-c2c8-457d-96aa-ca22dd563e91.mp4
 
-![image](https://user-images.githubusercontent.com/101942554/188296288-b2e83b17-8bd0-4783-b1e6-11e045f40ef8.png)
+![image](https://user-images.githubusercontent.com/101942554/188296789-eb18d3e1-9b2f-4450-a279-dcf28fa41647.png)
 
 

@@ -46,6 +46,8 @@ def ler_arquivo():
 
 def verificar():
 
+    tela.progressBar.setValue(0)
+
     if tela.ln_diretorio.text() != "": 
 
         if tela.cb_formato.currentText() != "":      
@@ -86,7 +88,7 @@ def convert():
         AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".wav", format="wav", bitrate = bitrate_k)
     
     # Atualiza Barra de Progressão
-    
+
     file_size = len(salv_arquivo_diretorio)
     if file_size > 0:
         for valor in range(101):

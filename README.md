@@ -1,5 +1,5 @@
 # VS - Conversor de Audio
-## Converte arquivos mp3 para flv, mp4, ogg e wav.    
+## Converte arquivos flv, mp3, mp4, ogg e wav.    
 Aplicação desenvolvida em Python com pyqt5, pydyb e pathlib.
 
 #### pyqt5 - https://www.riverbankcomputing.com/static/Docs/PyQt5/

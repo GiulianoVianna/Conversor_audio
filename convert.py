@@ -6,6 +6,8 @@ from PyQt5.QtWidgets import QMessageBox
 formato_audio = ""
 bitrate_k = ""
 
+# Mensagens de validação
+
 def msg_arquivo_audio():
     msg1 = QMessageBox()
     msg1.setIcon(QMessageBox.Critical)
@@ -27,30 +29,19 @@ def msg_bitrate_audio():
     msg1.setText('Favor escolher o bitrate do audio!')
     x = msg1.exec_()
 
+#################################################################
 
+# Lê o nome do arquivo e endereço do diretório
 
 def ler_arquivo():
     arquivo = QtWidgets.QFileDialog.getOpenFileName()[0]
     with open(arquivo) as diretorio: 
         tela.ln_diretorio.setText(diretorio.name)
 
-def convert():
+#################################################################
 
-    diretorio = tela.ln_diretorio.text()
-    salv_arquivo_diretorio = tela.ln_diretorio.text().replace(".mp3", "")
-    formato_audio = tela.cb_formato.currentText()
-    bitrate_k = tela.cb_bitrate.currentText()
+# Regra de validação para os campos obrigatórios
 
-    if formato_audio == "flv":
-        AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".flv", format="flv", bitrate = bitrate_k)
-    elif formato_audio == "mp4":
-        AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".mp4", format="mp4", bitrate = bitrate_k) 
-    elif formato_audio == "ogg":
-        AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".ogg", format="ogg", bitrate = bitrate_k) 
-    elif formato_audio == "wav":
-        AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".wav", format="wav", bitrate = bitrate_k)
-          
-        
 def verificar():
 
     if tela.ln_diretorio.text() != "": 
@@ -68,9 +59,30 @@ def verificar():
             msg_fortmato_audio()
 
     else:
-        msg_arquivo_audio()  
+        msg_arquivo_audio() 
 
+#################################################################
 
+# Faz a conversão do arquivo conforme o formato escolhido
+
+def convert():
+
+    diretorio = tela.ln_diretorio.text()
+    salv_arquivo_diretorio = tela.ln_diretorio.text().replace(".mp3", "")
+    formato_audio = tela.cb_formato.currentText()
+    bitrate_k = tela.cb_bitrate.currentText()
+
+    if formato_audio == "flv":
+        AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".flv", format="flv", bitrate = bitrate_k)
+    elif formato_audio == "mp4":
+        AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".mp4", format="mp4", bitrate = bitrate_k) 
+    elif formato_audio == "ogg":
+        AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".ogg", format="ogg", bitrate = bitrate_k) 
+    elif formato_audio == "wav":
+        AudioSegment.from_mp3(diretorio).export(salv_arquivo_diretorio + ".wav", format="wav", bitrate = bitrate_k)
+          
+################################################################# 
+ 
 
 app = QtWidgets.QApplication([])
 tela = uic.loadUi("convert.ui")
